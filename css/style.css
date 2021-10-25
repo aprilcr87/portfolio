@@ -1,0 +1,128 @@
+html {
+  scroll-behavior: smooth; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  padding: 30px; }
+
+.section {
+  margin-bottom: 8rem; }
+
+.main-background {
+  height: 90vh;
+  background-image: linear-gradient(to right bottom, rgba(205, 201, 193, 0.8), rgba(101, 91, 100, 0.8)), url(../img/charles-deluvio-unsplash.jpg);
+  background-size: cover;
+  background-position: top; }
+
+.text-box {
+  /* top and left are percentages of height and width of parent element 
+	translate is percentage of the element itself */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  animation-name: moveInLeft;
+  animation-duration: 3s; }
+
+.heading-primary--main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px; }
+
+.secret-icon {
+  animation: wiggle 200ms 3s 8 alternate ease; }
+
+@keyframes moveInLeft {
+  /* X is for left to right, Y top to bottom */
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  /* Makes it look like current state */
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(0); }
+  100% {
+    transform: rotateZ(10deg) scale(1.5); } }
+
+.about-jumbo {
+  background-color: #221F20; }
+
+.about-text {
+  height: 75vh;
+  text-align: center;
+  color: #FAD02C; }
+
+.feature-box {
+  margin-top: 3rem;
+  transition: transform .3s; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+
+.experience-jumbo {
+  background-color: #0391b8;
+  height: 75vh; }
+
+.experience-header {
+  color: #FAD02C;
+  text-align: center; }
+
+.e-card {
+  /* the lower the value, the more dramatic the perspective */
+  perspective: 150rem;
+  position: relative;
+  height: 30rem; }
+  .e-card__side {
+    text-align: center;
+    color: #333652;
+    height: 30rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .e-card__side--front {
+      background-color: #E9EAEC; }
+    .e-card__side--back {
+      background-image: linear-gradient(to right bottom, #CDC9C1, #FAD02C);
+      transform: rotateY(180deg); }
+  .e-card:hover .e-card__side--front {
+    transform: rotateY(-180deg); }
+  .e-card:hover .e-card__side--back {
+    transform: rotateY(0); }
+  .e-card__icon {
+    margin: 1rem 0 1rem 0;
+    display: inline-block;
+    font-size: 3rem;
+    background-image: linear-gradient(to right, #CDC9C1, #FAD02C);
+    -webkit-background-clip: text;
+    color: transparent; }
+
+.footer {
+  padding: 20px;
+  background-color: #cdc9c13b; }
+
+.contact-text {
+  text-align: center;
+  color: #655B64; }
+
+.form-label {
+  color: #655B64; }
+
+.top-button {
+  text-decoration: none; }

@@ -1,0 +1,200 @@
+$swirl: #CDC9C1;
+$thunder: #221F20;
+$fuel-yellow: #E7B722;
+$scorpion: #655B64;
+$blue-gray: #90ADC6;
+$pewter: #E9EAEC;
+$yellow: #FAD02C;
+$dark-blue: #333652;
+$sky-blue: #0391b8;
+
+
+html {
+	scroll-behavior: smooth;
+  }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 30px;
+}
+
+.section {
+	margin-bottom: 8rem;
+}
+
+// ---------------- Home ------------------------
+
+.main-background {
+	height: 90vh;
+
+	// CSS properties without SASS
+	// background-image: linear-gradient(
+	// 	to right bottom, 
+	// 	rgba(205, 201, 193, 0.808), 
+	// 	rgba(101, 91, 100, 0.808)), 
+	// 	url(../img/charles-deluvio-unsplash.jpg);
+
+		background-image: linear-gradient(
+		to right bottom, 
+		rgba($swirl, 0.8), 
+		rgba($scorpion, 0.8)), 
+		url(../img/charles-deluvio-unsplash.jpg);
+	background-size: cover;
+	background-position: top;
+}
+
+.text-box {
+	/* top and left are percentages of height and width of parent element 
+	translate is percentage of the element itself */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+	color: #fff;
+	text-transform: uppercase;	
+
+	animation-name: moveInLeft;
+	animation-duration: 3s;
+}
+
+.heading-primary--main {
+	display: block;
+	font-size: 60px;
+	font-weight: 400;
+	letter-spacing: 35px;
+}
+
+.secret-icon {
+	animation: wiggle 200ms 3s 8 alternate ease;
+}
+
+@keyframes moveInLeft {
+	/* X is for left to right, Y top to bottom */
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	/* Makes it look like current state */
+	100% {
+		opacity: 1;
+		transform: translate(0);
+
+	}
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotateZ(0);
+	}
+	100% {
+		transform: rotateZ(10deg) scale(1.5);
+	}
+}
+// ---------------- ABOUT -----------------------
+
+.about-jumbo {
+	background-color: $thunder;
+}
+
+.about-text {
+	height: 75vh;
+	text-align: center;
+	color: $yellow;
+}
+
+.feature-box {
+	margin-top: 3rem;
+	transition: transform .3s;
+
+	&:hover {
+		transform: translateY(-1.5rem) scale(1.03);
+	}
+}
+
+// --------------------- EXPERIENCE ----------------
+
+
+.experience-jumbo {
+	background-color: $sky-blue;
+	height: 75vh;
+}
+
+.experience-header {
+	color: $yellow;
+	text-align: center;
+}
+
+.e-card {
+	/* the lower the value, the more dramatic the perspective */
+	perspective: 150rem;
+	position: relative;
+	height: 30rem;
+
+	&__side {
+		text-align: center;
+		color: $dark-blue;
+		height: 30rem;
+		transition: all .8s ease;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		backface-visibility: hidden;
+		border-radius: 3px;
+		box-shadow: 0 1.5rem 4rem rgba(black, .15);
+
+		&--front {
+			background-color: $pewter;
+		}
+
+		&--back {
+			background-image: linear-gradient(to right bottom, $swirl, $yellow);
+			transform: rotateY(180deg);
+		}
+	}
+
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
+		
+	}
+
+	&:hover &__side--back {
+		transform: rotateY(0);
+	}
+
+	&__icon {
+		margin: 1rem 0 1rem 0;
+		display: inline-block;
+		font-size: 3rem;
+		background-image: linear-gradient(to right, $swirl, $yellow);
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+}
+
+.footer {
+	padding: 20px;
+	background-color: #cdc9c13b;
+  }
+
+.contact-text {
+	text-align: center;
+	color: $scorpion;
+}
+
+.form-label {
+	color: $scorpion;
+}
+  
+.top-button {
+	text-decoration: none;
+}
+  
