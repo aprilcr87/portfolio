@@ -203,8 +203,16 @@ body {
 
 	&__details {
 		margin-top: 2rem;
-
 	}
+
+	&__cta {
+		position: absolute;
+		margin-top: 7rem;
+		font-size: 1.5rem;
+		padding: 0 1rem 0 1rem;
+		font-weight: 100;
+	}
+
 }
 
 .footer {
