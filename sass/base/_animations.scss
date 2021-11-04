@@ -1,0 +1,22 @@
+@keyframes moveInLeft {
+	/* X is for left to right, Y top to bottom */
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	/* Makes it look like current state */
+	100% {
+		opacity: 1;
+		transform: translate(0);
+
+	}
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotateZ(0);
+	}
+	100% {
+		transform: rotateZ(10deg) scale(1.5);
+	}
+}
