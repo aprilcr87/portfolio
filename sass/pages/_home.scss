@@ -11,17 +11,16 @@
 
 .section-contact {
 	padding: 15rem 0;
-	background-image: linear-gradient(to right bottom, $pewter, $swirl);
+	background-color: #cdc9c13b;
 }
 
 .contact {
-	background-color: $color-white;
+	background-color: $pewter;
 	background-size: 100%;
 	border-radius: 3px;
 	box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
 
 	&__form {
-		width: 50%;
 		padding: 6rem;
 	}
 }

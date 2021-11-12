@@ -25,6 +25,10 @@
         &:focus:invalid {
             border-bottom: 3px solid $fuel-yellow;
         }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark;
+        }
     }
 
     &__label {
@@ -36,9 +40,9 @@
         transition: all .3s;
     }
 
-    // &__input:placeholder-shown + &__label {
-    //     opacity: 0;
-    //     visibility: hidden;
-    //     transform: translateY(-4rem);
-    // }
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
 }
