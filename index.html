@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
     <!--My stylesheet-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -20,10 +21,30 @@
     <main>
       <section class="section-about">
         <div class="u-center-text u-margin-bottom-large"></div>
-        <div class="container about-text">
-          <h1>About</h1>
-          <p class="paragraph">Most of my experience has been in customer facing roles. I have experience in food service, hospitality and retail which helped me fine tune my communications skills.</p>
-          <p class="paragraph">As a software engineer, I've worked mostly with JavaScript and React. I have also learned HTML, CSS and SASS in my own time to help design past projects in a professional setting.</p>
+        <div class="row">
+          <p class="line-1 anim-typewriter">Some important details to know about my background</p>
+        </div>
+        <div class="row">
+          <div class="col-1-of-2">
+            <p class="paragraph paragraph--about">Most of my experience has been in customer facing roles. 
+              I have experience in food service, hospitality and retail which helped me improve my communications skills and they way I present information depending on the audience.</p>
+            <p class="paragraph paragraph--about">As a software engineer, I started as a Jave developer but transitioned to front end and mainly worked with JavaScript and React.
+              I have also learned HTML, CSS and SASS, and unit testing with Jest in my own time to help with projects in a professional setting.</p>
+          </div>
+          <div class="col-1-of-2">
+            <div class="composition">
+
+              <img src="img/CMG.jpg" alt='Chipotle'
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+              class="composition__picture composition__picture--p1">
+              <img src="img/hamp_black.jpg" alt='Hampton Inn'
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+              class="composition__picture composition__picture--p2">
+              <img src="img/warby-parker-logo.jpg" alt='Warby Parker'
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+              class="composition__picture composition__picture--p3">
+            </div>
+          </div>
         </div>
       </section>
 
@@ -40,13 +61,17 @@
                   &nbsp;
                 </div>
                 <div class="card__details">
-                  <h3 class="card-title">Zip Code Wilmington</h3>
-                  <h4 class="card-subtitle mb-2 text-muted">Feb 2018-May 2018</h4>
+                  <ul>
+                    <li>Zip Code Wilmington</li>
+                    <li>Student</li>
+                    <li>Feb 2018-May 2018</li>
+                  </ul>
                 </div>
               </div>
               <div class="card__side card__side--back">
                 <div class="card__cta">
-                  <p>Object-Oriented Programming, Test-Driven Development, Agile and Scrum Methodologies</p>
+                  <p>Learned Object-oriented programming and made a mobile app using Angular and Ionic with TypeScript. 
+                    Practiced test-driven development and agile and scrum methodologies.</p>
                   <a href="https://www.zipcodewilmington.com/" target="_blank" class="btn btn--white">Check it out</a>
                 </div>                      
               </div>
@@ -60,13 +85,17 @@
                     &nbsp;
                   </div>
                   <div class="card__details">
-                    <h3 class="card-title">JP Morgan and Chase Co.</h3>
-                    <h4 class="card-subtitle mb-2 text-muted">June 2018-October 2021</h4>
+                    <ul>
+                      <li>JP Morgan and Chase Co.</li>
+                      <li>Associate Software Engineer</li>
+                      <li>June 2018-October 2021</li>
+                    </ul>
                   </div>                      
                 </div>
                 <div class="card__side card__side--back">
                   <div class="card__cta">
-                    <p class="card-text">Developed internal applications using React, JavaScript, HTML, and CSS utilizing Rest endpoints and JSON.</p>
+                    <p class="card-text">Developed internal applications using React, JavaScript, HTML, and CSS utilizing REST endpoints and JSON. 
+                      Communicated with users and stakeholders to gather and/or clarify requirements when necessary and assisted with production management utlizing Jenkins pipeline.</p>
                     <a href="https://www.jpmorgan.com/" target="_blank" class="btn btn--white">Check it out</a>
                   </div>                      
                 </div>
@@ -80,13 +109,17 @@
                     &nbsp;
                   </div>
                   <div class="card__details">
-                    <h3 class="card-title">Zip Code Wilmington</h3>
-                    <h4 class="card-subtitle mb-2 text-muted">Current</h4>
+                    <ul>
+                      <li>Zip Code Wilmington</li>
+                      <li>Adjunct/Instructor</li>
+                      <li>October 2021-Current</li>
+                    </ul>
                   </div>                      
                 </div>
                 <div class="card__side card__side--back">
                   <div class="card__cta">
-                    <p class="card-text">Assisting instructors with Zip Code and YearUp.</p>
+                    <p class="card-text">Assisting instructors with Zip Code Cohorts and the YearUp program. 
+                      Assisted students with learning HTML, CSS, Bootstrap, and JavaScript with React to make several small projects ioncluding a portfolio.</p>
                     <a href="https://www.accenture.com/us-en" target="_blank" class="btn btn--white">Check it out</a>
                   </div>                      
                 </div>
@@ -95,36 +128,43 @@
           
         </div>
       </section>
+
+      <section class="section-contact" id="contact" data-target="#contact">
+        <div class="row">
+          <div class="contact">
+            <div class="contact__form">
+              <form class="form">
+                <div class="u-center-text u-margin-bottom-medium">
+                  <h2 class="heading-secondary">Contact me</h2>
+                </div>
+                <!-- <div class="u-center-text u-margin-bottom-medium">
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-linkedin"></i>
+                  <i class="fab fa-github"></i>
+                </div> -->
+        
+                <div class="form__group">          
+                  <input type="text" class="form__input" id="name" placeholder="Full name" required>
+                  <label for="name" class="form__label">Name</label>
+                </div>
+        
+                <div class="form__group">
+                  <input type="email" class="form__input" id="email" required>
+                  <label for="email" class="form__label">Email</label>
+                </div>
+        
+                <div class="form__group">
+                  <a class="top-button" href="#"><button type="button" id="liveToastBtn" class="btn btn-outline-warning">Say hi</button></a>
+                </div>
+              </form>  
+            </div>
+          </div>
+        </div>    
+        <a class="top-button" href="#"><button type="button" class="btn btn-outline-info" id="scrollToTopBtn">Top</button></a>
+      </section>
     </main>
 
-    <footer class="footer" id="contact" data-target="#contact">
-      <div class="container">
-        <div class="contact-text">
-          <h1>Contact me</h1>
-          <i class="bi bi-twitter"></i>
-          <i class="bi bi-linkedin"></i>
-          <i class="bi bi-github"></i>
-        </div>
-        <form class="row g-3">
-          <div class="col-md-6">
-            <label for="inputName4" class="form-label">Name</label>
-            <input type="name" class="form-control" id="inputName4">
-          </div>
-          <div class="col-md-6">
-            <label for="inputCompany4" class="form-label">Company</label>
-            <input type="company" class="form-control" id="inputCompany4">
-          </div>
-          <div class="col-12">
-            <label for="inputEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="me@me.com">
-          </div>
-          <div class="col-12">
-            <a class="top-button" href="#"><button type="button" id="liveToastBtn" class="btn btn-outline-warning">Say hi</button></a>
-          </div>
-        </form>
-      </div>
-      <a class="top-button" href="#"><button type="button" class="btn btn-outline-info" id="scrollToTopBtn">Top</button></a>
-    </footer>
+    
     
 
   </body>

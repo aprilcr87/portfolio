@@ -67,11 +67,33 @@
 
 	&__details {
 		margin-top: 2rem;
+		padding: 3rem;
+
+		ul {
+			list-style: none;
+			width: 80%;
+			margin: 0 auto;
+
+			li {
+				text-align: center;
+				font-size: 1.5rem;
+				padding: 1rem;
+				font-weight: 300;
+
+				&:first-child {
+					border-bottom: 1px solid $color-grey-dark;
+				}
+			}
+		}
 	}
 
 	&__cta {
 		position: absolute;
-		margin-top: 7rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		text-align: center;
 		font-size: 1.5rem;
 		padding: 0 1rem 0 1rem;
 		font-weight: 100;
