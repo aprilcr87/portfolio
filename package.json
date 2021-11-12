@@ -4,7 +4,7 @@
   "description": "personal portfolio",
   "main": "index.js",
   "dependencies": {
-    "bootstrap-icons": "^1.6.0"
+    "@fortawesome/fontawesome-free": "^5.15.4"
   },
   "devDependencies": {
     "node-sass": "^6.0.1"
